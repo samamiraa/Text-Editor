@@ -31,8 +31,8 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Text Editor',
-        short_name: 'Editor',
+        name: 'Jate Text Editor',
+        short_name: 'jate',
         description: 'Text editor you can use offline!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
