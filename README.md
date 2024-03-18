@@ -1,19 +1,13 @@
 # Text-Editor
 
 Live Url 👇🏼<br>
+https://text-editor-8vbu.onrender.com/
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+A text editor that uses webpack, service workers and manifest. This project ended up having some tough debugging in it and that definitely motivated me to keep at it to get everything working. The purpose of this project was to get an understanding of how some progressive web applications work, so the main focus here was the PWA's and the starter code that was given had a completed UI. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -22,48 +16,36 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Use the script 'npm run install' to make sure everything is installed correctly as there are 3 package.json files.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+When the application opens the UI is very simple. Simply enter any text you would like to save and it will be saved to the indexDb so if you refresh the page or close and reopen, your inputted text will still be there<br>
+<br>
+<img width="1200" alt="text editor" src="./readmeIMG/1 text editor.png"><br>
+<br>
+Another thing to note is the application can be used offline. When you click the install button, a prompt to confirm installation will appear.<br>
+<br>
+<img width="1200" alt="install prompt" src="./readmeIMG/2 install prompt.png"><br>
+<br>
+After installation is complete, the downloaded application will open up and it should look like this.<br>
+<br>
+<img width="1200" alt="offline application" src="./readmeIMG/3 offline installed app.png"><br>
+<br>
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+As per usual, I always refer to the class activities for guidance, but a few thank you's are in order. Thank you to my tutor Andrew, for going over the basics of PWA's to help better my understanding. Thank you to the ask BCS learning assistances for helping me debug. Thank you to my colleague Shawn for helping me debug as well and with the deployment on render.
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+https://webpack.js.org/guides/<br>
+https://developer.mozilla.org/en-US/docs/Web/Manifest<br>
+https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API<br>
+https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API<br>
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+The MIT License is short and to the point. It lets people do almost anything they want with your project, like making and distributing closed source versions.
 
 ## Tests
 
-Go the extra mile and write tests for your application.
+Add some text to the editor that you would like to save for later. If you close the app and reopen, all your text will still be there. If you want to use the editor offline, click the install button and install the app to your computer!
