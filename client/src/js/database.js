@@ -1,5 +1,6 @@
 import { openDB } from 'idb';
 
+// creates and initializes database
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -12,19 +13,24 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+// adds/updates content to database
 export const putDb = async (content) => {
   try {
     console.log('Post to the database');
 
+    //creates connect to dband chooses version to use
     const jateDb = await openDB('jate', 1);
 
+    //creates new transaction annd sets data privileges
     const tx = jateDb.transaction('jate', 'readwrite');
 
+    //opens object store
     const store = tx.objectStore('jate');
 
+    // uses .put() method to update content
     const request = store.put({ id:1, jate: content });
 
+    //confirmation request
     const result = await request;
     console.log('Data saved to the database', result);
   } catch (error) {
@@ -32,7 +38,6 @@ export const putDb = async (content) => {
   }
 }
 
-// TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   try {
     console.log('GET from the database');
@@ -43,6 +48,7 @@ export const getDb = async () => {
 
     const store = tx.objectStore('jate');
 
+    // gets contact with id
     const request = store.get(1);
 
     const result = await request;
@@ -52,4 +58,6 @@ export const getDb = async () => {
     console.error('getDb not implemented');
   }
 }
+
+//starts db
 initdb();
